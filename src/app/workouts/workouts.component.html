@@ -1,0 +1,24 @@
+<h2>My Workouts</h2>
+<div>
+  <label>Hero name:</label> <input #workoutName />
+  <button (click)="add(workoutName.value); workoutName.value=''">
+    Add
+  </button>
+</div>
+<ul class="workouts">
+     <li *ngFor="let workout of workouts" (click)="onSelect(workout)"
+        [class.selected]="workout === selectedWorkout">
+        <span class="badge">-</span>
+        <span>{{workout.name}}</span>
+        <button class="delete"
+            (click)="delete(workout); $event.stopPropagation()">x</button>
+     </li>
+
+</ul>
+<div *ngIf="selectedWorkout">
+    <h2>
+        {{selectedWorkout.name | uppercase}} is a tough workout
+    </h2>
+    <app-exercises *ngIf="selectedWorkout" [exercises]="selectedWorkout.exercises" [workoutId]="selectedWorkout._id"></app-exercises>
+    <button (click)="gotoDetail()">View Details</button>
+</div>
