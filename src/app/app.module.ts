@@ -15,6 +15,7 @@ import { ExercisesComponent } from './exercises/exercises.component';
 
 import { WorkoutService } from './services/workout.service';
 import { ExerciseService } from './services/exercise.service';
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ExerciseService } from './services/exercise.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [WorkoutService, ExerciseService],
+  providers: [WorkoutService, ExerciseService, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
