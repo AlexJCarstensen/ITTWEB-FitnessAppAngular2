@@ -23,7 +23,7 @@ private password: string;
 
   register(): void {
 
-    RegisterService.register()
+    //RegisterService.register()
 
   }
 

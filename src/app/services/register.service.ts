@@ -17,22 +17,22 @@ private handleError(error: any): Promise<any> {
 }
   constructor() { }
 
-  register(): Promise<void> {
+  // register(): Promise<void> {
 
-    const url = `${this.baseUrl}${this.registerUrl}`;
-        return this.http
-        .put(url, JSON.stringify({name: this.}}), {headers: this.getHeaders()})
-        .toPromise()
-        .then(() => workout)
-        .catch(this.handleError);
-  }
+  //   const url = `${this.baseUrl}${this.registerUrl}`;
+  //       return this.http
+  //       .put(url, JSON.stringify({name: this.}}), {headers: this.getHeaders()})
+  //       .toPromise()
+  //       .then(() => workout)
+  //       .catch(this.handleError);
+  // }
 
-   private getHeaders(): Headers {
-        return new Headers({
-            'Content-Type': 'application/json',
-            "Authorization": "Bearer " + localStorage.getItem("token")
-        });
-    }
+  //  private getHeaders(): Headers {
+  //       return new Headers({
+  //           'Content-Type': 'application/json',
+  //           "Authorization": "Bearer " + localStorage.getItem("token")
+  //       });
+  //   }
 
 
 
