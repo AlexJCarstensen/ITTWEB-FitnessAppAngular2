@@ -23,8 +23,12 @@ private password: string;
 
   register(): void {
 
-    //RegisterService.register()
-
+        if(!this.name || !this.email || !this.password)
+        {}
+        else{
+          this.RegisterService.doRegister(this.name, this.email, this.password);
+          
+        }
   }
 
 }
